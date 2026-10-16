@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Symptom Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="app-header">
+      <h1> Symptom Tracker</h1>
+      <p class="subtitle">
+        Enter a symptom and save it.
+      </p>
+    </header>
+
+    <section class="card input-card">
+      <label for="symptomInput">Add a symptom</label>
+      
+        <input
+          type="text"
+          id="symptomInput"
+          placeholder="e.g., Headache, Fatigue, Nausea"
+          maxlength="80"
+          autocomplete="off"
+        />
+        
+        <button id="add-btn" type="button">Add</button>
+      
+      <p id="error-msg" class="error" aria-live="polite"></p>
+    </section>
+
+    <section class="card list-card">
+      <div class="list-header">
+        <h2>Current Symptoms</h2>
+        <span id="count-badge" class="badge">0</span>
+      </div>
+      <ul id="symptomList" class="symptom-list"></ul>
+      <p id="empty-state" class="empty-state">No symptoms logged yet. Add one above.</p>
+    </section>
+
+    <footer class="app-footer">
+      <p>Data persists via Firebase Firestome.</p>
+    </footer>
+  </main>
+
+  
+  
+  <script  type="module" src="script.js"></script>
+</body>
+</html>
